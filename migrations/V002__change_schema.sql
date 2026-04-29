@@ -5,7 +5,7 @@ UPDATE product AS p
 SET price = pi.price
 FROM product_info AS pi
 WHERE pi.product_id = p.id
-    AND (p.price IS NULL OR p.price IS DISTINCT FROM pi.price)
+    AND (p.price IS NULL OR p.price IS DISTINCT FROM pi.price);
 
 DROP TABLE IF EXISTS product_info;
 
