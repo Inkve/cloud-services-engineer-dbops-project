@@ -16,7 +16,7 @@ UPDATE orders AS o
 SET date_created = od.date_created
 FROM orders_date AS od
 WHERE od.order_id = o.id
-    AND (o.date_created IS NULL OR o.date_created IS DISTINCT FROM od.date_created)
+    AND (o.date_created IS NULL OR o.date_created IS DISTINCT FROM od.date_created);
 
 UPDATE orders
 SET date_created = current_date
